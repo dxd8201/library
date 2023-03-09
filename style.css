@@ -1,0 +1,22 @@
+.book-container {
+    background-color: blueviolet;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.book-card {
+    width: 2rem;
+    height: 10rem;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border: solid black 1px;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+}
