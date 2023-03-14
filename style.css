@@ -1,22 +1,167 @@
-.book-container {
-    background-color: blueviolet;
-    width: 100vw;
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(10, 10, 10);
+    font-family: 'VT323', monospace;
+    letter-spacing: 1px;
+}
+
+button {
+    color: white;
+    background-color: black;
+    border: none;
+    font-family: 'VT323', monospace;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.btn:hover, .btn:active {
+    transform: scale(1.1);
+}
+
+.container {
+    background-color: rgb(10, 10, 10);
+    margin: 0 auto;
+    max-width: 100%;
     height: 100vh;
+    border: black 1px solid;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr;
+    grid-template-rows: repeat(4, 1fr);
+    overflow-y: none;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    grid-area: 1 / 2 / 2 / 5;
+}
+
+.book-container {
+    background-color: rgb(10, 10, 10);
+    border: solid 1px rgb(199, 199, 199);
     display: flex;
     justify-content: space-around;
     align-items: center;
+    grid-area: 2 / 2 / 5 / 5;
+    margin: 1rem;
 }
 
 .book-card {
     width: 2rem;
     height: 10rem;
-    background-color: red;
+    background-color: rgb(19, 18, 18);
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    border: solid black 1px;
+    border: solid rgb(199, 199, 199) 1px;
     justify-items: center;
     align-items: center;
     text-align: center;
     border-radius: 5px;
+    color: white;
+}
+
+.header-container h1 {
+    color: rgb(233, 218, 87);
+}
+
+.sidebar-container {
+    grid-area: 1 / 1 / 5 / 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(134, 107, 233);
+    color: rgb(233, 218, 87);
+    font-weight: bold;
+    margin: 1rem 1rem 0 1rem;
+    border-radius: 9px;
+    justify-self: stretch;
+    grid-area: 1 / 1 / 3 / 2;
+}
+
+.opaque {
+    background-color: rgba(134, 107, 233, 0);
+    display: none;
+}
+
+.input-container {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.input-container div {
+    margin-bottom: 1rem;
+}
+
+form button {
+    background-color: rgb(134, 107, 233);
+    border: none;
+    color: rgb(233, 218, 87);
+}
+
+.label-alignment-container label {
+    font-size: 1.5rem;
+}
+
+.label-alignment-container input{
+    margin-top: .3rem;
+}
+
+.legend-container {
+    align-self: center;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.book-of-lore-anchor {
+    color: rgb(233, 218, 87);
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    padding: .5rem;
+    font-size: 1.5rem;
+    background-color: rgb(10, 10, 10);
+    
+}
+
+.side-bar-lower-half {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    grid-area: 3 / 1 / 5 / 2;
+
+}
+
+.side-bar-img-container {
+    border: solid 1px white;
+    color: white;
+    flex: 1;
+    padding: 0 1rem;
+}
+
+.hidden-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr)
 }
