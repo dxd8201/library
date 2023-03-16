@@ -1,5 +1,12 @@
 const bookContainer = document.querySelector("#bookContainer");
 const newBookBtn = document.querySelector("#newBookBtn");
+const hiddenContainer = document.querySelector("#hiddenContainer");
+const gridContainer = document.querySelector("#sideBarImageGrid");
+
+function popupMenu() {
+    hiddenContainer.classList.remove("opaque");
+    gridContainer.classList.add("opaque");
+}
 
 let myLibrary = [
     {

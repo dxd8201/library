@@ -23,7 +23,7 @@
                 Save your Favorite Forgotten Runes <strong>WIZARDS</strong> and <strong>WARRIORS</strong> 
             </h1>
 
-            <button class="btn" id="newBookBtn">New Character</button>
+            <button class="btn" id="newBookBtn" onclick="popupMenu()">New Character</button>
         </div>
 
         <div class="book-container" id="bookContainer">
@@ -31,11 +31,22 @@
         </div>
     
         <div class="sidebar-container">
-            <!-- <div class="visible-container">
+            <div class="sidebar-image-grid" id="sideBarImageGrid">
+                <div class="side-bar-img-grid-container">
+                    <img src="./media/2820-hardwin-punisher-of-ruffians-nobg.png" alt="Picture of a Warrior">
+                </div>
+                <div class="side-bar-img-grid-container">
+                    <img src="./media/2402-pyromancer-artis-of-the-rock-nobg.png" alt="Picture of a Wizard">
+                </div>
+                <div class="side-bar-img-grid-container">
+                    <img src="./media/3757-boop-eidolon-of-the-dojo-nobg.png" alt="Picture of a Warrior">
+                </div>
+                <div class="side-bar-img-grid-container">
+                    <img src="./media/2241-battle-mage-angus-of-mu-nobg.png" alt="Picture of a Wizard">
+                </div>
+            </div>
 
-            </div> -->
-            
-            <div class="hidden-container">
+            <div class="hidden-container opaque" id="hiddenContainer">
                 <div class="form-container">
                     <form id="form">
                         <legend class="legend-container">
@@ -71,7 +82,6 @@
                     </div>
                 </div>
             </div>
-            
         </div>
     </div>
     
