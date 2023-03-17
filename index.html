@@ -23,7 +23,7 @@
                 Save your Favorite Forgotten Runes <strong>WIZARDS</strong> and <strong>WARRIORS</strong> 
             </h1>
 
-            <button class="btn" id="newBookBtn" onclick="popupMenu()">New Character</button>
+            <button class="btn" id="newCharBtn" onclick="popupMenu()">New Character</button>
         </div>
 
         <div class="book-container" id="bookContainer">
@@ -48,7 +48,7 @@
 
             <div class="hidden-container opaque" id="hiddenContainer">
                 <div class="form-container">
-                    <form id="form">
+                    <form id="form" method="post">
                         <legend class="legend-container">
                             Add a new character
                         </legend>
@@ -67,7 +67,7 @@
                                 <input type="checkbox" id="lore" name="lore" required>
                             </div>
                 
-                            <button class="btn" form="form">Submit</button>
+                            <button class="btn" form="form" id="submitBtn">Submit</button>
                         </div>
                     </form>
                 </div>

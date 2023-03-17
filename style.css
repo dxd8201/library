@@ -48,26 +48,35 @@ button {
 .book-container {
     background-color: rgb(10, 10, 10);
     border: solid 1px rgb(199, 199, 199);
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: repeat(2, 1fr);
     align-items: center;
     grid-area: 2 / 2 / 5 / 5;
     margin: 1rem;
+    max-width: 100%;
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    gap: 1rem;
+}
+
+.book-container::-webkit-scrollbar {
+    display: none;
 }
 
 .book-card {
-    width: 2rem;
-    height: 10rem;
     background-color: rgb(19, 18, 18);
     display: flex;
     flex-direction: column;
-    padding: 1rem;
     border: solid rgb(199, 199, 199) 1px;
     justify-items: center;
     align-items: center;
     text-align: center;
     border-radius: 5px;
     color: white;
+    margin: 1rem;
+    
 }
 
 .header-container h1 {
@@ -83,6 +92,7 @@ button {
     max-height: 100%; */
     width: 100%;
     height: 100%;
+    transition: all 1s linear;
 
 }
 
@@ -106,7 +116,10 @@ form {
 
 .opaque  {
     background-color: rgba(134, 107, 233, 0);
-    display: none !important;
+    transform: scale(.1);
+    /* display: none !important; */
+    transition: all .5s linear;
+    z-index: -999;
 }
 
 .input-container {
@@ -178,6 +191,7 @@ form button {
     /* display: flex;
     flex-direction: column;
     justify-content: stretch; */
+    transition: all 1s linear;
 
 }
 
@@ -185,7 +199,8 @@ form button {
     grid-area: 1 / 1 / 5 / 2;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 1fr)
+    grid-template-rows: repeat(4, 1fr);
+    transition: all 1s linear;
 }
 
 .side-bar-img-grid-container {
@@ -198,4 +213,17 @@ form button {
     max-width: 100%;
     max-height: 100%;
     align-self: center;
+}
+
+.generated-img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.remove-icon {
+    stroke: gold;
+    max-height: 1.5rem;
+    align-self: flex-end;
+    justify-self: flex-start;
+    cursor: pointer;
 }
