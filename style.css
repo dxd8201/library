@@ -16,7 +16,7 @@ button {
     font-family: 'VT323', monospace;
     font-size: 2rem;
     cursor: pointer;
-    transition: all .5s;
+    transition: all .3s ease-in-out;
 }
 
 .btn:hover, .btn:active {
@@ -226,4 +226,30 @@ form button {
     align-self: flex-end;
     justify-self: flex-start;
     cursor: pointer;
+}
+
+.author-container, .has-lore {
+    
+    padding: .2rem 1.2rem .2rem 1.2rem;
+    border-radius: 9px;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.author-container {
+    background-color: rgb(209, 68, 68);
+}
+
+.author-container:hover {
+    background-color: rgb(228, 117, 117);
+}
+
+.has-lore {
+    background-color: rgb(134, 107, 233);
+}
+
+.has-lore:hover {
+    background-color: rgb(163, 144, 233);
 }
