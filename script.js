@@ -58,14 +58,13 @@ let myLibrary = [
     }
 ];
 
-
-
 function submitNewCharacter(event) {
     let loreValue = "";
     event.preventDefault(event);
     console.log("You submitted a new character");
     if(loreInput.checked === true) {   
         loreValue = "Has lore";
+        // loreElt.classList.add("has-lore");
     } else {
         loreValue = "No Lore";
     }
@@ -120,13 +119,18 @@ function renderLibrary() {
         loreElt.setAttribute("id", "loreCheck");
         imgElt.classList.add("generated-img");
 
+        if(myLibraryData.lore === "Has lore") {
+            loreElt.classList.add("has-lore");
+        } else if (myLibraryData.lore !== "Has lore") {
+            loreElt.classList.remove("has-lore");
+        }
+
+
         //fills the element with the object info
         nameElt.textContent = myLibraryData.name;
         numberElt.textContent = myLibraryData.number;
         loreElt.textContent = myLibraryData.lore;
-        imgElt.src = myLibraryData.image;
-
-        
+        imgElt.src = myLibraryData.image; 
     }
 
     for (var i = 0; i < removeIcon.length; i++) {
@@ -141,12 +145,11 @@ function renderLibrary() {
      for (var i = 0; i < loreCheck.length; i++) {
         let loreCheck = document.querySelectorAll("#loreCheck");
         loreCheck[i].addEventListener('click', function(i) {
-            if(myLibraryData.lore === "Has lore") {
-                loreElt.classList.add("has-lore");
-            }
-            loreCheck[i].classList.toggle("has-lore");
+        loreCheck[i].classList.toggle("has-lore");
         }.bind(null, i));
      }
+
+     console.log("New list was rendered")
 }
 
 function addNewChar(character) {
@@ -167,6 +170,12 @@ function addNewChar(character) {
     numberElt.classList.add("pages-container");
     loreElt.classList.add("author-container");
     imgElt.classList.add("generated-img");
+
+    if(character.lore === "Has lore") {
+        loreElt.classList.add("has-lore");
+    } else if (character.lore !== "Has lore") {
+        loreElt.classList.remove("has-lore");
+    }
 
     nameElt.textContent = character.name;
     numberElt.textContent = character.tokenNumber;
