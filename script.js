@@ -13,10 +13,26 @@ const myImage = new Image();
 
 submitBtn.addEventListener("click", submitNewCharacter);
 
-function Character(name, tokenNumber, lore) {
-    this.name = name;
-    this.tokenNumber = tokenNumber;
-    this.lore = lore;
+// function Character(name, tokenNumber, lore) {
+//     this.name = name;
+//     this.tokenNumber = tokenNumber;
+//     this.lore = lore;
+// }
+
+class Character {
+    constructor(name, tokenNumber, lore) {
+        this.name = name;
+        this.tokenNumber = tokenNumber;
+        this.lore = lore;
+    }
+
+    get name() {
+        return this._name;
+    }
+
+    set name(value) {
+        this._name = value;
+    }
 }
 
 let myLibrary = [
